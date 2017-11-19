@@ -89,6 +89,8 @@ _OBJS			=	ft_memset.o \
 					ft_lstmerge.o \
 					ft_lstdump.o \
 					ft_lstsort.o \
+					ft_cinstr.o \
+					ft_strchrindex.o \
 					ft_abs.o \
 					ft_swap.o \
 					ft_memalloc2.o \
