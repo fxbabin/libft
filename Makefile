@@ -117,23 +117,23 @@ _GREEN=\x1b[32m
 _END=\x1b[0m
 
 .PHONY: all clean fclean re
-
+.SILENT:
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@ar rc $(NAME) $^
-	@ranlib $(NAME)
-	@echo "$(NAME) compilation : $(_GREEN)done$(_END)"
+	ar rc $(NAME) $^
+	ranlib $(NAME)
+	echo "$(NAME) compilation : $(_GREEN)done$(_END)"
 
 $(SRCS)/%.o: %.c
-	@$(CC) $(CFLAGS) -c $<
+	$(CC) $(CFLAGS) -c $<
 
 clean:
-	@$(RM) -f $(OBJS)
-	@echo "clean : $(_GREEN)done$(_END)"
+	$(RM) -f $(OBJS)
+	echo "clean : $(_GREEN)done$(_END)"
 
 fclean: clean
-	@$(RM) -f $(NAME)
-	@echo "fclean : $(_GREEN)done$(_END)"
+	$(RM) -f $(NAME)
+	echo "fclean : $(_GREEN)done$(_END)"
 
 re: fclean all
