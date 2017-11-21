@@ -118,6 +118,7 @@ _END=\x1b[0m
 
 .PHONY: all clean fclean re
 .SILENT:
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
