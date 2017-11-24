@@ -6,7 +6,7 @@
 #    By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:49:24 by fbabin            #+#    #+#              #
-#    Updated: 2017/11/24 13:40:43 by fbabin           ###   ########.fr        #
+#    Updated: 2017/11/24 13:55:38 by fbabin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -89,7 +89,6 @@ _OBJS			=	ft_memset.o \
 					ft_lstmerge.o \
 					ft_lstdump.o \
 					ft_lstsort.o \
-					ft_cinstr.o \
 					ft_strchrindex.o \
 					ft_abs.o \
 					ft_swap.o \
