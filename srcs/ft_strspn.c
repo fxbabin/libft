@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cinstr.c                                        :+:      :+:    :+:   */
+/*   ft_strspn.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/18 12:22:30 by fbabin            #+#    #+#             */
-/*   Updated: 2017/11/18 13:43:29 by fbabin           ###   ########.fr       */
+/*   Created: 2017/11/24 13:39:34 by fbabin            #+#    #+#             */
+/*   Updated: 2017/11/24 13:39:55 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_cinstr(char *str, char c)
+size_t	ft_strspn(const char *s, const char *charset)
 {
-	int		i;
+	size_t		i;
+	int		y;
 
 	i = 0;
-	while (str[i])
+	while (s[i])
 	{
-		if (str[i] == c)
-			return (1);
+		y = -1;
+		while (charset[++y])
+		{
+			if (s[i] != charset[y])
+				return (i);
+		}
 		i++;
 	}
-	return (0);
+	return (i);
 }
