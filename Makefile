@@ -6,7 +6,7 @@
 #    By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:49:24 by fbabin            #+#    #+#              #
-#    Updated: 2017/11/19 14:29:36 by fbabin           ###   ########.fr        #
+#    Updated: 2017/11/24 13:40:43 by fbabin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -108,6 +108,8 @@ _OBJS			=	ft_memset.o \
 					ft_strmergesort.o \
 					ft_char2dump.o \
 					ft_int2dump.o \
+					ft_strspn.o \
+					ft_strcspn.o \
 
 OBJS			= $(patsubst %,$(SRCS)/%,$(_OBJS))
 RM				= /bin/rm -f

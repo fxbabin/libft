@@ -6,7 +6,7 @@
 /*   By: fbabin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/15 16:16:51 by fbabin            #+#    #+#             */
-/*   Updated: 2017/11/18 13:46:13 by fbabin           ###   ########.fr       */
+/*   Updated: 2017/11/24 13:41:13 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,5 +126,7 @@ void				ft_mergesort(int **array, int left, int right);
 void				ft_strmergesort(char **array, int left, int right);
 void				ft_char2dump(char **array);
 void				ft_int2dump(int **array, int size);
+size_t				ft_strspn(const char *s, const char *charset);
+size_t				ft_strcspn(const char *s, const char *charset);
 
 #endif
