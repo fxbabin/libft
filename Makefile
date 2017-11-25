@@ -6,7 +6,7 @@
 #    By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:49:24 by fbabin            #+#    #+#              #
-#    Updated: 2017/11/24 13:55:38 by fbabin           ###   ########.fr        #
+#    Updated: 2017/11/25 17:01:26 by fbabin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,7 @@ _OBJS			=	ft_memset.o \
 					ft_strncmp.o \
 					ft_atoi.o \
 					ft_itoa.o \
+					ft_itoa_base.o \
 					ft_isalpha.o \
 					ft_isdigit.o \
 					ft_isalnum.o \
