@@ -6,7 +6,7 @@
 #    By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:49:24 by fbabin            #+#    #+#              #
-#    Updated: 2017/11/25 17:01:26 by fbabin           ###   ########.fr        #
+#    Updated: 2017/11/26 15:35:21 by fbabin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,7 +96,9 @@ _OBJS			=	ft_memset.o \
 					ft_memalloc2.o \
 					ft_ftoa.o \
 					ft_ltoa.o \
+					ft_ltoa_base.o \
 					ft_lltoa.o \
+					ft_lltoa_base.o \
 					ft_memdup.o \
 					ft_realloc.o \
 					ft_strreplace.o \

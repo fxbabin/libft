@@ -6,7 +6,7 @@
 /*   By: fbabin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/15 16:16:51 by fbabin            #+#    #+#             */
-/*   Updated: 2017/11/25 17:02:18 by fbabin           ###   ########.fr       */
+/*   Updated: 2017/11/26 15:33:15 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,8 @@ void				**ft_memalloc2(size_t size, size_t len);
 char				*ft_ftoa(double nb, int prec);
 char				*ft_ltoa(long nb);
 char				*ft_lltoa(long long nb);
+char				*ft_ltoa_base(long nb, const char *base);
+char				*ft_lltoa_base(long long nb, const char *base);
 void				*ft_memdup(const void *s);
 void				*ft_realloc(void *ptr, size_t size);
 char				*ft_strreplace(char *str, const char *old,
