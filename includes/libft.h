@@ -6,7 +6,7 @@
 /*   By: fbabin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/15 16:16:51 by fbabin            #+#    #+#             */
-/*   Updated: 2017/11/26 15:33:15 by fbabin           ###   ########.fr       */
+/*   Updated: 2017/11/30 11:36:28 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,7 @@ char				*ft_ltoa(long nb);
 char				*ft_lltoa(long long nb);
 char				*ft_ltoa_base(long nb, const char *base);
 char				*ft_lltoa_base(long long nb, const char *base);
+char				*ft_llutoa_base(unsigned long long nb, const char *base);
 void				*ft_memdup(const void *s);
 void				*ft_realloc(void *ptr, size_t size);
 char				*ft_strreplace(char *str, const char *old,
