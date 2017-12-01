@@ -6,7 +6,7 @@
 /*   By: fbabin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/15 16:16:51 by fbabin            #+#    #+#             */
-/*   Updated: 2017/11/30 11:36:28 by fbabin           ###   ########.fr       */
+/*   Updated: 2017/12/01 21:30:36 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,6 +109,9 @@ void				ft_lstsort(t_list **list);
 int					ft_abs(int nb);
 void				ft_swap(int *a, int *b);
 int					ft_strchrindex(char *str, char c);
+int					ft_charinset(char c, const char *charset);
+char				*ft_strjoinclr(char *s1, char *s2, int b);
+char				*ft_strnjoinclr(char *s1, char *s2, int len, int b);
 int					ft_isspace(char c);
 void				**ft_memalloc2(size_t size, size_t len);
 char				*ft_ftoa(double nb, int prec);

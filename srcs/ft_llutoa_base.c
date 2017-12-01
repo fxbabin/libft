@@ -6,7 +6,7 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 11:35:24 by fbabin            #+#    #+#             */
-/*   Updated: 2017/11/30 11:41:37 by fbabin           ###   ########.fr       */
+/*   Updated: 2017/12/01 21:37:39 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int				ft_countllu(unsigned long nb, int len)
 
 	if (nb == 0)
 		return (1);
-	i = (neg == -1 && len == 10) ? 1 : 0;
+	i = 0;
 	while (nb)
 	{
 		nb /= len;
