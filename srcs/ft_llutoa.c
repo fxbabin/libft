@@ -6,7 +6,7 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/02 20:18:46 by fbabin            #+#    #+#             */
-/*   Updated: 2017/12/02 20:19:10 by fbabin           ###   ########.fr       */
+/*   Updated: 2017/12/02 21:58:33 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_llutoa(unsigned long long nb)
 {
-	char		*str;
-	int			i;
+	char				*str;
+	int					i;
 	unsigned long long	tmp;
 
 	i = 1;

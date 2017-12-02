@@ -6,7 +6,7 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 13:37:54 by fbabin            #+#    #+#             */
-/*   Updated: 2017/12/01 21:56:55 by fbabin           ###   ########.fr       */
+/*   Updated: 2017/12/02 21:45:00 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 size_t	ft_strcspn(const char *s, const char *charset)
 {
 	size_t		i;
-	int		y;
+	int			y;
 
 	i = 0;
 	while (s[i])
