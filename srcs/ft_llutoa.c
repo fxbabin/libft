@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcspn.c                                       :+:      :+:    :+:   */
+/*   ft_llutoa.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/24 13:37:54 by fbabin            #+#    #+#             */
-/*   Updated: 2017/12/01 21:56:55 by fbabin           ###   ########.fr       */
+/*   Created: 2017/12/02 20:18:46 by fbabin            #+#    #+#             */
+/*   Updated: 2017/12/02 20:19:10 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strcspn(const char *s, const char *charset)
+char	*ft_llutoa(unsigned long long nb)
 {
-	size_t		i;
-	int		y;
+	char		*str;
+	int			i;
+	unsigned long long	tmp;
 
-	i = 0;
-	while (s[i])
-	{
-		y = -1;
-		while (charset[++y])
-		{
-			if (s[i] == charset[y])
-				return (i);
-		}
-		i++;
-	}
-	return (i);
+	i = 1;
+	tmp = nb;
+	while (tmp >= 10 && (tmp /= 10) && i++)
+		;
+	if ((str = (char*)malloc((i + 1) * sizeof(char))) == NULL)
+		return (NULL);
+	tmp = 1;
+	nb *= tmp;
+	str[i] = '\0';
+	while (i-- && (str[i] = nb % 10 + 48))
+		nb /= 10;
+	return (str);
 }
