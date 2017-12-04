@@ -6,27 +6,33 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 13:39:34 by fbabin            #+#    #+#             */
-/*   Updated: 2017/12/02 21:44:50 by fbabin           ###   ########.fr       */
+/*   Updated: 2017/12/03 14:00:46 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strspn(const char *s, const char *charset)
+static int		ft_in(char c, const char *charset)
 {
-	size_t		i;
-	int			y;
+	int		i;
+	int		b;
 
-	i = 0;
-	while (s[i])
+	i = -1;
+	b = 0;
+	while (charset[++i])
 	{
-		y = -1;
-		while (charset[++y])
-		{
-			if (s[i] != charset[y])
-				return (i);
-		}
-		i++;
+		if (c == charset[i])
+			return (1);
 	}
+	return (b);
+}
+
+int			ft_strspn(const char *s, const char *charset)
+{
+	int		i;
+
+	i = -1;
+	while (s[++i] && ft_in(s[i], charset))
+		;
 	return (i);
 }
