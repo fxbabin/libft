@@ -6,37 +6,77 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 21:28:56 by fbabin            #+#    #+#             */
-/*   Updated: 2017/11/08 21:30:15 by fbabin           ###   ########.fr       */
+/*   Updated: 2017/12/13 18:21:16 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_ftoa(double nb, int prec)
+static char		*ft_zeros(double nb, int prec)
 {
-	int		i;
-	int		tmp;
 	char	*str;
-	double	dec;
-	int		y;
+	int		i;
+	int		x;
 
-	i = (nb < 0) ? 2 : 1;
-	tmp = (nb < 0) ? -nb : nb;
-	while (tmp >= 10 && (tmp /= 10) && i++)
-		;
-	if ((str = (char*)malloc((i + prec + 2) * sizeof(char))) == NULL)
-		return (0);
-	tmp = (nb < 0) ? -1 : 1;
-	nb *= tmp;
-	str[i + prec + 1] = '\0';
-	dec = nb - ((int)nb);
-	y = -1;
-	while (++y < prec && (dec -= (int)dec) && (dec *= 10))
-		str[i + y + 1] = ((int)dec) + 48;
-	str[i] = '.';
-	while (i-- && (str[i] = ((int)nb % 10) + 48))
-		nb /= 10;
-	if (tmp < 0)
-		str[0] = '-';
+	i = -1;
+	x = 0;
+	if (!(str = ft_strnew(prec)))
+		return (NULL);
+	while (nb <= 0.1)
+	{
+		str[++i] = '0';
+		nb *= 10;
+		x++;
+	}
+	while (prec - x)
+	{
+		nb *= 10;
+		str[++i] = (int)nb + 48;
+		nb -= (int)nb;
+		prec--;
+		if (!(prec - x) && (int)(nb * 10) >= 5)
+			str[i]++;
+	}
+	return (str);
+}
+
+static int		ft_recursive_power(int nb, int power)
+{
+	if (power == 1)
+		return (nb);
+	if (power == 0)
+		return (1);
+	if (power > 1)
+	{
+		nb *= ft_recursive_power(nb, power - 1);
+		return (nb);
+	}
+	return (0);
+}
+
+char			*ft_ftoa(double nb, int prec)
+{
+	char		*str;
+	double		dec;
+	double		add;
+	int			tmp;
+
+	if (!(str = ft_strnew(0)))
+		return (NULL);
+	if (prec == 0)
+		prec = 6;
+	add = 0.1;
+	tmp = prec;
+	while (tmp--)
+		add /= 10;
+	nb += (nb < 0) ? -add : add;
+	dec = nb - ((long long)nb);
+	dec *= (nb < 0) ? -1 : 1;
+	str = ft_strjoinclr(str, ft_lltoa((long long)nb), 0);
+	if (prec)
+	{
+		str = ft_strjoinclr(str, ".", 1);
+		str = ft_strjoinclr(str, ft_zeros(dec, prec), 0);
+	}
 	return (str);
 }
