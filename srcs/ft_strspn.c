@@ -6,7 +6,7 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 13:39:34 by fbabin            #+#    #+#             */
-/*   Updated: 2017/12/03 14:00:46 by fbabin           ###   ########.fr       */
+/*   Updated: 2017/12/13 20:25:37 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int		ft_in(char c, const char *charset)
 	return (b);
 }
 
-int			ft_strspn(const char *s, const char *charset)
+size_t			ft_strspn(const char *s, const char *charset)
 {
 	int		i;
 

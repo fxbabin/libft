@@ -6,7 +6,7 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 21:28:56 by fbabin            #+#    #+#             */
-/*   Updated: 2017/12/13 18:21:16 by fbabin           ###   ########.fr       */
+/*   Updated: 2017/12/13 20:24:48 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static char		*ft_zeros(double nb, int prec)
 	return (str);
 }
 
-static int		ft_recursive_power(int nb, int power)
+/*static int		ft_recursive_power(int nb, int power)
 {
 	if (power == 1)
 		return (nb);
@@ -52,7 +52,7 @@ static int		ft_recursive_power(int nb, int power)
 		return (nb);
 	}
 	return (0);
-}
+}*/
 
 char			*ft_ftoa(double nb, int prec)
 {

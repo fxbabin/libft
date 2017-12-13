@@ -6,144 +6,71 @@
 #    By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:49:24 by fbabin            #+#    #+#              #
-#    Updated: 2017/12/02 20:19:31 by fbabin           ###   ########.fr        #
+#    Updated: 2017/12/13 20:45:25 by fbabin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			= libft.a
 
 CC				= gcc
-CFLAGS			= -Wall -Werror -Wextra -I includes/
-SRCS			= srcs
+CFLAGS			= -Wall -Werror -Wextra
 
-_OBJS			=	ft_memset.o \
-					ft_bzero.o \
-					ft_memcpy.o \
-					ft_memccpy.o \
-					ft_memmove.o \
-					ft_memchr.o \
-					ft_memcmp.o \
-					ft_strlen.o \
-					ft_strdup.o \
-					ft_strcpy.o \
-					ft_strncpy.o \
-					ft_strcat.o \
-					ft_strncat.o \
-					ft_strlcat.o \
-					ft_strchr.o \
-					ft_strrchr.o \
-					ft_strstr.o \
-					ft_strnstr.o \
-					ft_strcmp.o \
-					ft_strncmp.o \
-					ft_atoi.o \
-					ft_itoa.o \
-					ft_itoa_base.o \
-					ft_isalpha.o \
-					ft_isdigit.o \
-					ft_isalnum.o \
-					ft_isascii.o \
-					ft_isprint.o \
-					ft_toupper.o \
-					ft_tolower.o \
-					ft_memalloc.o \
-					ft_memdel.o \
-					ft_strnew.o \
-					ft_strdel.o \
-					ft_strclr.o \
-					ft_putstr.o \
-					ft_striter.o \
-					ft_striteri.o \
-					ft_strmap.o \
-					ft_strmapi.o \
-					ft_strequ.o \
-					ft_strnequ.o \
-					ft_strsub.o \
-					ft_strjoin.o \
-					ft_strtrim.o \
-					ft_strsplit.o \
-					ft_putchar.o \
-					ft_putstr.o \
-					ft_putendl.o \
-					ft_putnbr.o \
-					ft_putchar_fd.o \
-					ft_putstr_fd.o \
-					ft_putendl_fd.o \
-					ft_putnbr_fd.o \
-					ft_lstnew.o \
-					ft_lstdelone.o \
-					ft_lstdel.o \
-					ft_lstadd.o \
-					ft_lstiter.o \
-					ft_lstmap.o \
-					ft_isspace.o \
-					ft_lstcreate.o \
-					ft_lstpushback.o \
-					ft_lstpushfront.o \
-					ft_lstsize.o \
-					ft_lstlast.o \
-					ft_lstclear.o \
-					ft_lstatpos.o \
-					ft_lstreverse.o \
-					ft_lstfind.o \
-					ft_lstremoveif.o \
-					ft_lstmerge.o \
-					ft_lstdump.o \
-					ft_lstsort.o \
-					ft_strchrindex.o \
-					ft_charinset.o \
-					ft_strjoinclr.o \
-					ft_strnjoinclr.o \
-					ft_abs.o \
-					ft_swap.o \
-					ft_memalloc2.o \
-					ft_ftoa.o \
-					ft_ltoa.o \
-					ft_ltoa_base.o \
-					ft_lltoa.o \
-					ft_llutoa.o \
-					ft_lltoa_base.o \
-					ft_llutoa_base.o \
-					ft_memdup.o \
-					ft_realloc.o \
-					ft_strreplace.o \
-					ft_split.o \
-					ft_join.o \
-					ft_quicksort.o \
-					ft_strquicksort.o \
-					ft_mergesort.o \
-					ft_strmergesort.o \
-					ft_char2dump.o \
-					ft_int2dump.o \
-					ft_strspn.o \
-					ft_strcspn.o \
+_SRCS			=	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c \
+					ft_memmove.c ft_memchr.c ft_memcmp.c ft_strlen.c \
+					ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strcat.c \
+					ft_strncat.c ft_strlcat.c ft_strchr.c ft_strrchr.c \
+					ft_strstr.c ft_strnstr.c ft_strcmp.c ft_strncmp.c \
+					ft_atoi.c ft_itoa.c ft_itoa_base.c ft_isalpha.c \
+					ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
+					ft_toupper.c ft_tolower.c ft_memalloc.c ft_memdel.c \
+					ft_strnew.c ft_strdel.c ft_strclr.c ft_putstr.c \
+					ft_striter.c ft_striteri.c ft_strmap.c ft_strmapi.c \
+					ft_strequ.c ft_strnequ.c ft_strsub.c ft_strjoin.c \
+					ft_strtrim.c ft_strsplit.c ft_putchar.c ft_putstr.c \
+					ft_putendl.c ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c \
+					ft_putendl_fd.c ft_putnbr_fd.c ft_lstnew.c ft_lstdelone.c \
+					ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
+					ft_isspace.c ft_lstcreate.c ft_lstpushback.c \
+					ft_lstpushfront.c ft_lstsize.c ft_lstlast.c ft_lstclear.c \
+					ft_lstatpos.c ft_lstreverse.c ft_lstfind.c \
+					ft_lstremoveif.c ft_lstmerge.c ft_lstdump.c ft_lstsort.c \
+					ft_strchrindex.c ft_charinset.c ft_strjoinclr.c \
+					ft_strnjoinclr.c ft_abs.c ft_swap.c ft_memalloc2.c \
+					ft_ftoa.c ft_ltoa.c ft_ltoa_base.c ft_lltoa.c \
+					ft_llutoa.c ft_lltoa_base.c ft_llutoa_base.c \
+					ft_memdup.c ft_realloc.c ft_strreplace.c ft_split.c \
+					ft_join.c ft_quicksort.c ft_strquicksort.c \
+					ft_mergesort.c ft_strmergesort.c ft_char2dump.c \
+					ft_int2dump.c ft_strspn.c ft_strcspn.c \
 
-OBJS			= $(patsubst %,$(SRCS)/%,$(_OBJS))
-RM				= /bin/rm -f
+SRCS_DIR		= srcs
+SRCS			= $(addprefix $(SRCS_DIR)/, $(_SRCS))
+OBJS			= $(SRCS:.c=.o)
 
-#Color
+#COLORS
+_CYAN=\x1b[36m
 _GREEN=\x1b[32m
+_YELLOW=\x1b[33m
 _END=\x1b[0m
-
-.PHONY: all clean fclean re
-.SILENT:
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rc $(NAME) $^
-	ranlib $(NAME)
-	echo "$(NAME) compilation : $(_GREEN)done$(_END)"
+		@ar rc $(NAME) $(OBJS)
+		@ranlib $(NAME)
+		@echo "$(NAME) : $(_GREEN)Done$(_END)"
 
-$(SRCS)/%.o: %.c
-	$(CC) $(CFLAGS) -c $<
+%.o : %.c
+	$(CC) $(CFLAGS) -c $< -o $@ -I includes/
 
 clean:
-	$(RM) -f $(OBJS)
-	echo "clean : $(_GREEN)done$(_END)"
+		@/bin/rm -f $(OBJS)
+		@echo "clean : $(_GREEN)Done$(_END)"
 
 fclean: clean
-	$(RM) -f $(NAME)
-	echo "fclean : $(_GREEN)done$(_END)"
+		@/bin/rm -f $(NAME)
+		@echo "fclean : $(_GREEN)Done$(_END)"
 
 re: fclean all
+
+.PHONY: all clean fclean re
