@@ -6,7 +6,7 @@
 #    By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:49:24 by fbabin            #+#    #+#              #
-#    Updated: 2017/12/13 20:45:25 by fbabin           ###   ########.fr        #
+#    Updated: 2017/12/14 20:24:15 by fbabin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,6 +71,8 @@ fclean: clean
 		@/bin/rm -f $(NAME)
 		@echo "fclean : $(_GREEN)Done$(_END)"
 
-re: fclean all
+re:
+	@make fclean
+	@make
 
 .PHONY: all clean fclean re
