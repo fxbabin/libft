@@ -6,7 +6,7 @@
 /*   By: fbabin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/15 16:16:51 by fbabin            #+#    #+#             */
-/*   Updated: 2017/12/18 14:23:08 by fbabin           ###   ########.fr       */
+/*   Updated: 2017/12/18 18:50:50 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strmjoin(char *s1, char const *s2, int len1, int len2);
 char				*ft_strtrim(const char *s);
 char				**ft_strsplit(const char *str, char c);
 int					ft_strcmp(const char *s1, const char *s2);

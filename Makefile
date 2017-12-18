@@ -6,7 +6,7 @@
 #    By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:49:24 by fbabin            #+#    #+#              #
-#    Updated: 2017/12/14 20:41:22 by fbabin           ###   ########.fr        #
+#    Updated: 2017/12/18 18:50:18 by fbabin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ _SRCS			=	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c \
 					ft_ftoa.c ft_ltoa.c ft_ltoa_base.c ft_lltoa.c \
 					ft_llutoa.c ft_lltoa_base.c ft_llutoa_base.c \
 					ft_memdup.c ft_realloc.c ft_strreplace.c ft_split.c \
-					ft_join.c ft_quicksort.c ft_strquicksort.c \
+					ft_join.c ft_strmjoin.c ft_quicksort.c ft_strquicksort.c \
 					ft_mergesort.c ft_strmergesort.c ft_char2dump.c \
 					ft_int2dump.c ft_strspn.c ft_strcspn.c \
 
