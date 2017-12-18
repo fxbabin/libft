@@ -6,13 +6,13 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/18 12:28:16 by fbabin            #+#    #+#             */
-/*   Updated: 2017/11/18 13:44:10 by fbabin           ###   ########.fr       */
+/*   Updated: 2017/12/17 17:10:03 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strchrindex(char *str, char c)
+int		ft_strchrindex(const char *str, char c)
 {
 	int		i;
 

@@ -6,7 +6,7 @@
 /*   By: fbabin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/15 16:16:51 by fbabin            #+#    #+#             */
-/*   Updated: 2017/12/17 16:35:30 by fbabin           ###   ########.fr       */
+/*   Updated: 2017/12/18 14:23:08 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,9 +90,11 @@ void				ft_lstadd(t_list **alst, t_list *fresh);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
-t_list				*ft_lstcreate(void *content);
-void				ft_lstpushback(t_list **begin_list, void *content);
-void				ft_lstpushfront(t_list **begin_list, void *content);
+t_list				*ft_lstcreate(void *content, size_t cs);
+void				ft_lstpushback(t_list **begin_list, void *content,
+						size_t cs);
+void				ft_lstpushfront(t_list **begin_list, void *content,
+						size_t cs);
 int					ft_lstsize(t_list *begin_list);
 t_list				*ft_lstlast(t_list *begin_list);
 void				ft_lstclear(t_list **begin_list);
@@ -108,7 +110,7 @@ void				ft_lstsort(t_list **list);
 
 int					ft_abs(int nb);
 void				ft_swap(int *a, int *b);
-int					ft_strchrindex(char *str, char c);
+int					ft_strchrindex(const char *str, char c);
 int					ft_charinset(char c, const char *charset);
 char				*ft_strjoinclr(char *s1, char *s2, int b);
 char				*ft_strnjoinclr(char *s1, char *s2, int len, int b);

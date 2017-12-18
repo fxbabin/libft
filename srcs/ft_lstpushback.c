@@ -6,13 +6,13 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 21:58:25 by fbabin            #+#    #+#             */
-/*   Updated: 2017/11/14 13:18:24 by fbabin           ###   ########.fr       */
+/*   Updated: 2017/12/18 14:28:52 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_lstpushback(t_list **begin_list, void *content)
+void		ft_lstpushback(t_list **begin_list, void *content, size_t cs)
 {
 	t_list		*tmp;
 
@@ -23,8 +23,8 @@ void		ft_lstpushback(t_list **begin_list, void *content)
 		tmp = *begin_list;
 		while (tmp->next)
 			tmp = tmp->next;
-		tmp->next = ft_lstcreate(content);
+		tmp->next = ft_lstcreate(content, cs);
 	}
 	else
-		*begin_list = ft_lstcreate(content);
+		*begin_list = ft_lstcreate(content, cs);
 }
