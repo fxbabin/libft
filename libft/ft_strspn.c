@@ -6,13 +6,13 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 13:39:34 by fbabin            #+#    #+#             */
-/*   Updated: 2017/12/20 20:48:11 by fbabin           ###   ########.fr       */
+/*   Updated: 2017/12/20 20:55:36 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t			ft_strspn(const char *s, const char *charset)
+int			ft_strspn(const char *s, const char *charset)
 {
 	int		i;
 
