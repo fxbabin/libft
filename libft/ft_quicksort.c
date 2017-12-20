@@ -6,7 +6,7 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/20 22:15:35 by fbabin            #+#    #+#             */
-/*   Updated: 2017/12/20 22:16:17 by fbabin           ###   ########.fr       */
+/*   Updated: 2017/12/20 22:20:17 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,6 @@ void			ft_quicksort(int *array, int left, int right)
 	if (left >= right || left < 0 || right < 0 || !array)
 		return ;
 	index = ft_partition(array, left, right);
-	ft_quicksort2(array, left, index - 1);
-	ft_quicksort2(array, index, right);
+	ft_quicksort(array, left, index - 1);
+	ft_quicksort(array, index, right);
 }
