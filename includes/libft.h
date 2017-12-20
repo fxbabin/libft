@@ -6,7 +6,7 @@
 /*   By: fbabin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/15 16:16:51 by fbabin            #+#    #+#             */
-/*   Updated: 2017/12/20 22:17:33 by fbabin           ###   ########.fr       */
+/*   Updated: 2017/12/20 23:06:00 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
 void				**ft_memalloc2(size_t size, size_t len);
-void				*ft_memdup(const void *s);
+void				*ft_memdup(const void *s, size_t i);
 void				*ft_realloc(void *ptr, size_t size);
 
 /*
