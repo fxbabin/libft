@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_xtract.c                                        :+:      :+:    :+:   */
+/*   xtract.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 20:11:01 by fbabin            #+#    #+#             */
-/*   Updated: 2017/12/11 18:38:21 by fbabin           ###   ########.fr       */
+/*   Updated: 2017/12/21 21:28:00 by misteir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ static int		ft_xtract_number(const char *str)
 
 static int		ft_xtract_float(const char *str)
 {
-	int		sign;
 	int		a;
 
 	a = 0;
@@ -40,7 +39,6 @@ static int		ft_xtract_float(const char *str)
 	if ((!*str || *str == '.') && (str[1] == '0' || !ft_isdigit(str[1])))
 		return (-1);
 	str++;
-	sign = (*str == '-') ? -1 : 1;
 	str += (*str == '-' || *str == '+') ? 1 : 0;
 	while (*str && ft_isdigit(*str))
 		a = (a * 10) + (*(str++) - '0');
