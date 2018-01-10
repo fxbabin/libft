@@ -6,7 +6,7 @@
 /*   By: fbabin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/15 16:16:51 by fbabin            #+#    #+#             */
-/*   Updated: 2017/12/21 21:26:47 by misteir          ###   ########.fr       */
+/*   Updated: 2018/01/10 15:24:08 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,7 +123,7 @@ char				*ft_llutoa_base(unsigned long long nb, const char *base);
 
 char				**ft_split(char *str, char *charset);
 char				*ft_join(char **tab, char *sep);
-void				ft_quicksort(int *array, int left, int right);
+void				ft_quicksort(int **array, int left, int right);
 void				ft_quicksort2(int **array, int left, int right);
 void				ft_strquicksort(char **array, int left, int right);
 void				ft_mergesort(int **array, int left, int right);
@@ -171,6 +171,7 @@ void				ft_lstremoveif(t_list **begin_list,
 void				ft_lstmerge(t_list **begin_list1, t_list *begin_list2);
 void				ft_lstdump(t_list **list);
 void				ft_lstsort(t_list **list);
+void				ft_elemdel(void *content, size_t content_size);
 
 /*
 ** ----------------------------- UTILS FUNCTIONS ------------------------------
