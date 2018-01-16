@@ -6,7 +6,7 @@
 /*   By: fbabin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/15 16:16:51 by fbabin            #+#    #+#             */
-/*   Updated: 2018/01/10 15:24:08 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/01/16 15:21:47 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,8 @@ void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
-void				**ft_memalloc2(size_t size, size_t len);
+int					**ft_int2alloc(size_t size, size_t len);
+char				**ft_char2alloc(size_t size, size_t len);
 void				*ft_memdup(const void *s, size_t i);
 void				*ft_realloc(void *ptr, size_t size);
 

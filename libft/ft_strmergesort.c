@@ -6,7 +6,7 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 22:20:51 by fbabin            #+#    #+#             */
-/*   Updated: 2017/11/14 19:02:25 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/01/16 15:23:35 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void			ft_strmergesort(char **array, int left, int right)
 
 	if (left < 0 || right < 0 || !array || !*array)
 		return ;
-	if (!(tmp = (char**)ft_memalloc2(right + 1, 1)))
+	if (!(tmp = ft_char2alloc(right + 1, 1)))
 		return ;
 	ft_sort(array, tmp, left, right);
 	free(tmp);
