@@ -6,7 +6,7 @@
 #    By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:49:24 by fbabin            #+#    #+#              #
-#    Updated: 2018/01/16 22:26:59 by fbabin           ###   ########.fr        #
+#    Updated: 2018/01/25 00:15:30 by fbabin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ _LIBS			=	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c \
 					ft_strbspn.c ft_strbcspn.c ft_atol.c ft_atoll.c \
 					ft_atollu.c ft_char2alloc.c \
 
-_GNLS			=	get_next_line.c \
+_GNLS			=	get_next_line.c sget_next_line.c \
 
 _PRINTFS		=	init.c handlers_scp.c handlers_wc.c \
 					handlers_ws.c handlers_iox.c handlers_fpb.c \
