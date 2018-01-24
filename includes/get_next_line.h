@@ -6,7 +6,7 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 13:09:10 by fbabin            #+#    #+#             */
-/*   Updated: 2018/01/17 21:18:06 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/01/24 22:45:59 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,10 @@ typedef struct			s_gnl
 ** -------------------------------- SOURCES ---------------------------------
 */
 
+int						sget_next_char(const int fd, char **line, char c);
+int						get_next_char(const int fd, char **line,
+							char *buff, char c);
 int						get_next_line(const int fd, char **line);
+int						sget_next_line(const int fd, char **line);
 
 #endif

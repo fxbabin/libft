@@ -6,7 +6,7 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/18 14:04:29 by fbabin            #+#    #+#             */
-/*   Updated: 2018/01/17 15:38:28 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/01/24 22:40:38 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ t_gnl			*ft_gnlfindfd(t_gnl *begin_list, int fd)
 	return (tmp);
 }
 
-int				inner_get_next_line(const int fd, char **line, char *buff)
+int				get_next_char(const int fd, char **line, char *buff, char c)
 {
 	int				ret;
 	int				endl;
@@ -91,11 +91,11 @@ int				inner_get_next_line(const int fd, char **line, char *buff)
 			return (1);
 		if (!ret && !*buff)
 			return (0);
-		idx = ft_strchrindex(buff, '\n');
-		if ((endl = ft_charinset('\n', buff)) < 0 ||
+		idx = ft_strchrindex(buff, c);
+		if ((endl = ft_charinset(c, buff)) < 0 ||
 				!(*line = ft_strnjoinclr(*line, buff, idx, 1)))
 			return (-1);
-		ft_strcpy((char*)buff, &(buff[(buff[idx] == '\n') ? (idx + 1) : idx]));
+		ft_strcpy((char*)buff, &(buff[(buff[idx] == c) ? (idx + 1) : idx]));
 		if (endl)
 			return (1);
 	}
@@ -114,7 +114,7 @@ int				get_next_line(const int fd, char **line)
 		ft_gnlpushfront(&g, fd);
 		tmp = ft_gnlfindfd(g, fd);
 	}
-	if ((ret = inner_get_next_line(fd, line, tmp->buff)) == 0)
+	if ((ret = get_next_char(fd, line, tmp->buff, '\n')) == 0)
 		ft_gnlremovefd(&g, fd);
 	return (ret);
 }
