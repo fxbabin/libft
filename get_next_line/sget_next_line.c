@@ -6,7 +6,7 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/24 22:41:59 by fbabin            #+#    #+#             */
-/*   Updated: 2018/01/24 23:09:40 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/01/24 23:17:08 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int				sget_next_char(const int fd, char **line, char c)
 {
-	char			buff[BUFF_SIZE + 1];
+	static char		buff[BUFF_SIZE + 1];
 	int				ret;
 	int				endl;
 	int				idx;
@@ -43,29 +43,5 @@ int				sget_next_char(const int fd, char **line, char c)
 
 int				sget_next_line(const int fd, char **line)
 {
-	static char		buff[BUFF_SIZE + 1];
-	int				ret;
-	int				endl;
-	int				idx;
-
-	if (!line || !(*line = ft_strnew(BUFF_SIZE)) || BUFF_SIZE < 1)
-		return (-1);
-	while (1)
-	{
-		if (!*buff)
-			ft_bzero(buff, BUFF_SIZE + 1);
-		if (!*buff && (ret = read(fd, buff, BUFF_SIZE)) < 0)
-			return (-1);
-		if (!ret && **line)
-			return (1);
-		if (!ret && !*buff)
-			return (0);
-		idx = ft_strchrindex(buff, '\n');
-		if ((endl = ft_charinset('\n', buff)) < 0 ||
-				!(*line = ft_strnjoinclr(*line, buff, idx, 1)))
-			return (-1);
-		ft_strcpy((char*)buff, &(buff[(buff[idx] == '\n') ? (idx + 1) : idx]));
-		if (endl)
-			return (1);
-	}
+	return (sget_next_char(fd, line, '\n'));
 }
