@@ -6,7 +6,7 @@
 /*   By: fbabin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/15 16:16:51 by fbabin            #+#    #+#             */
-/*   Updated: 2018/01/24 22:20:18 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/01/25 21:05:25 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,12 +166,13 @@ void				ft_lstclear(t_list **begin_list);
 t_list				*ft_lstatpos(t_list *begin_list, unsigned int nbr);
 void				ft_lstreverse(t_list **begin_list);
 t_list				*ft_lstfind(t_list *begin_list,
-						void *data_ref, int (*cmp)());
+						void *data_ref, int (*cmp)(), size_t size);
 void				ft_lstremoveif(t_list **begin_list,
-						void *content_ref, int (*cmp)());
+						void *content_ref, int (*cmp)(), size_t size);
 void				ft_lstmerge(t_list **begin_list1, t_list *begin_list2);
 void				ft_lstdump(t_list **list);
 void				ft_lstsort(t_list **list);
+void				ft_eldel(void *content, size_t content_size);
 void				ft_elemdel(void *content, size_t content_size);
 
 /*

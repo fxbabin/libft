@@ -6,11 +6,17 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 21:52:40 by fbabin            #+#    #+#             */
-/*   Updated: 2018/01/10 15:20:28 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/01/25 21:06:56 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	ft_eldel(void *content, size_t content_size)
+{
+	(void)content_size;
+	(void)content;
+}
 
 void	ft_elemdel(void *content, size_t content_size)
 {
