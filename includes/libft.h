@@ -6,7 +6,7 @@
 /*   By: fbabin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/15 16:16:51 by fbabin            #+#    #+#             */
-/*   Updated: 2018/01/25 21:05:25 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/01/27 17:12:30 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
 int					**ft_int2alloc(size_t size, size_t len);
 char				**ft_char2alloc(size_t size, size_t len);
+void				**ft_memalloc2(size_t si1, size_t si2, size_t size);
+void				ft_free2(void **tab);
 void				*ft_memdup(const void *s, size_t i);
 void				*ft_realloc(void *ptr, size_t size);
 
@@ -130,7 +132,7 @@ void				ft_strquicksort(char **array, int left, int right);
 void				ft_mergesort(int **array, int left, int right);
 void				ft_strmergesort(char **array, int left, int right);
 void				ft_char2dump(char **array);
-void				ft_int2dump(int **array, int size);
+void				ft_int2dump(int **array);
 
 /*
 ** ---------------------------- PUT FUNCTIONS ---------------------------------
