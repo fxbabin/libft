@@ -79,6 +79,7 @@ int				get_next_char(const int fd, char **line, char *buff, char c)
 	int				endl;
 	int				idx;
 
+	ret = 0;
 	if (!line || !(*line = ft_strnew(BUFF_SIZE)) || BUFF_SIZE < 1)
 		return (-1);
 	while (1)
