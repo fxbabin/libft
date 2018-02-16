@@ -6,7 +6,7 @@
 /*   By: fbabin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/15 16:16:51 by fbabin            #+#    #+#             */
-/*   Updated: 2018/02/16 17:56:43 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/02/16 22:14:22 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ void				*ft_realloc(void *ptr, size_t size);
 
 size_t				ft_strlen(const char *s);
 char				*ft_strdup(const char *s);
-char				*ft_strndup(const char *s, int start, int end);
 char				*ft_strcpy(char *dest, const char *src);
 char				*ft_strncpy(char *dest, const char *src, size_t n);
 char				*ft_strcat(char *s1, const char *s2);
