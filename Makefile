@@ -6,7 +6,7 @@
 #    By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:49:24 by fbabin            #+#    #+#              #
-#    Updated: 2018/01/27 17:12:20 by fbabin           ###   ########.fr        #
+#    Updated: 2018/02/16 17:42:49 by fbabin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,10 +47,8 @@ _LIBS			=	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c \
 
 _GNLS			=	get_next_line.c sget_next_line.c \
 
-_PRINTFS		=	init.c handlers_scp.c handlers_wc.c \
-					handlers_ws.c handlers_iox.c handlers_fpb.c \
-					handlers_du.c utils.c utils_2.c ft_printf.c \
-					ft_printf_alt.c padding.c xtract.c \
+_PRINTFS		=	ft_printf.c padding.c xtract.c handler_wc.c handler_ws.c \
+					handler_num.c handler_fnk.c \
 
 LIBS_DIR		= libft
 GNLS_DIR		= get_next_line
