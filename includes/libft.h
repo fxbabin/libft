@@ -6,7 +6,7 @@
 /*   By: fbabin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/15 16:16:51 by fbabin            #+#    #+#             */
-/*   Updated: 2018/02/16 22:14:22 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/03/13 00:29:07 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
-# include <inttypes.h>
 
 /*
 ** --------------------------------- STRUCTURES -------------------------------
@@ -193,5 +192,7 @@ int					ft_toupper(int c);
 int					ft_tolower(int c);
 int					ft_abs(int nb);
 void				ft_swap(int *a, int *b);
+int					ft_tabsize(void **tab);
+char				*ft_getopt(int argc, char **argv, const char *opts);
 
 #endif
