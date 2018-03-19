@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_btreepush.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 22:26:47 by fbabin            #+#    #+#             */
-/*   Updated: 2018/03/19 16:45:04 by fbabin           ###   ########.fr       */
+/*   Created: 2018/03/19 17:04:31 by fbabin            #+#    #+#             */
+/*   Updated: 2018/03/19 17:39:25 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_swap(int *a, int *b)
+void	ft_btreepush(t_btree **root, void *item, int (*cmpf)(void *, void *))
 {
-	int	c;
-
-	c = *a;
-	*a = *b;
-	*b = c;
+	if (root && *root)
+	{
+		if ((*cmpf)(item, (*root)->item) < 0)
+			ft_btreepush(&((*root)->left), item, cmpf);
+		else
+			ft_btreepush(&((*root)->right), item, cmpf);
+	}
+	else
+		*root = ft_btreecreate(item);
 }

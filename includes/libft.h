@@ -6,7 +6,7 @@
 /*   By: fbabin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/15 16:16:51 by fbabin            #+#    #+#             */
-/*   Updated: 2018/03/19 14:28:39 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/03/19 17:37:41 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,13 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct		s_btree
+{
+	struct s_btree	*left;
+	struct s_btree	*right;
+	void			*item;
+}					t_btree;
 
 /*
 ** ----------------------------------------------------------------------------
@@ -177,6 +184,17 @@ void				ft_lstdump(t_list **list);
 void				ft_lstsort(t_list **list);
 void				ft_eldel(void *content, size_t content_size);
 void				ft_elemdel(void *content, size_t content_size);
+
+/*
+** --------------------------- BTREE FUNCTIONS --------------------------------
+*/
+
+t_btree				*ft_btreecreate(void *item);
+void				ft_btreepush(t_btree **root, void *item,
+						int (*cmpf)(void *, void *));
+void				ft_btreeprefix(t_btree *root, void (*applyf)(void *));
+void				ft_btreeinfix(t_btree *root, void (*applyf)(void *));
+void				ft_btreepostfix(t_btree *root, void (*applyf)(void *));
 
 /*
 ** ----------------------------- UTILS FUNCTIONS ------------------------------
