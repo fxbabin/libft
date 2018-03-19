@@ -6,7 +6,7 @@
 #    By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:49:24 by fbabin            #+#    #+#              #
-#    Updated: 2018/03/19 17:38:20 by fbabin           ###   ########.fr        #
+#    Updated: 2018/03/19 17:54:32 by fbabin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,7 +73,7 @@ _END=\x1b[0m
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) includes/libft.h includes/get_next_line.h includes/ft_printf.h
 		@ar rc $(NAME) $(OBJS)
 		@ranlib $(NAME)
 		@echo "$(NAME) : $(_GREEN)Done$(_END)"
