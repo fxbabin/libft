@@ -6,7 +6,7 @@
 #    By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:49:24 by fbabin            #+#    #+#              #
-#    Updated: 2018/03/13 00:29:42 by fbabin           ###   ########.fr        #
+#    Updated: 2018/03/19 14:39:50 by fbabin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME			= libft.a
 CC				= gcc
 FLAGS			= -Wall -Werror -Wextra
 
-_LIBS			=	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c \
+_LIBS			=	ft_memset.c ft_bzero.c ft_bchar.c ft_memcpy.c ft_memccpy.c \
 					ft_memmove.c ft_memchr.c ft_memcmp.c ft_strlen.c \
 					ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strcat.c \
 					ft_strncat.c ft_strlcat.c ft_strchr.c ft_strrchr.c \
