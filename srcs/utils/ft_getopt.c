@@ -6,11 +6,14 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 00:19:46 by fbabin            #+#    #+#             */
-/*   Updated: 2018/03/13 00:26:32 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/04/16 22:32:34 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "utils.h"
 #include "ft_printf.h"
+#include "mem.h"
+#include "str.h"
 
 static void		add_option(char **opt, char flag, const char *opts)
 {
@@ -54,7 +57,7 @@ char			*ft_getopt(int argc, char **argv, const char *opts)
 	int		i;
 
 	i = 0;
-	if (!(tabopt = ft_split((char*)opts, ";")))
+	if (!(tabopt = (char**)ft_split((char*)opts, ";")))
 		return (NULL);
 	if (!(opt = (char*)ft_memalloc((ft_strlen(opts) + 1) * sizeof(char))))
 		return (NULL);

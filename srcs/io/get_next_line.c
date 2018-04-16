@@ -6,11 +6,13 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/18 14:04:29 by fbabin            #+#    #+#             */
-/*   Updated: 2018/01/24 22:40:38 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/04/16 23:35:49 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "io.h"
+#include "mem.h"
+#include "str.h"
 
 void			ft_gnlremovefd(t_gnl **begin_gnl, int fd)
 {

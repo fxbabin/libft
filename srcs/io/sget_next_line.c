@@ -6,11 +6,13 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/24 22:41:59 by fbabin            #+#    #+#             */
-/*   Updated: 2018/02/16 22:27:40 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/04/16 23:36:02 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "io.h"
+#include "mem.h"
+#include "str.h"
 
 int				sget_next_char(const int fd, char **line, char c)
 {

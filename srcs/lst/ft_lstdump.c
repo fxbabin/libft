@@ -6,11 +6,12 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 21:53:28 by fbabin            #+#    #+#             */
-/*   Updated: 2017/11/14 16:13:16 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/04/16 22:43:28 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lst.h"
+#include "io.h"
 
 void		ft_lstdump(t_list **list)
 {

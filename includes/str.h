@@ -6,7 +6,7 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/16 01:27:13 by fbabin            #+#    #+#             */
-/*   Updated: 2018/04/16 01:28:07 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/04/16 22:34:18 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,6 @@ int					ft_strspn(const char *s, const char *charset);
 int					ft_strcspn(const char *s, const char *charset);
 char				ft_strbspn(const char *s, const char *charset);
 char				ft_strbcspn(const char *s, const char *charset);
+char				**ft_split(char *str, char *charset);
 
 #endif

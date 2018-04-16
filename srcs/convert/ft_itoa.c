@@ -6,12 +6,13 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 21:35:07 by fbabin            #+#    #+#             */
-/*   Updated: 2018/04/16 01:14:43 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/04/16 22:40:48 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "convert.h"
 #include "str.h"
+#include "utils.h"
 
 static int		ft_count(int nb)
 {

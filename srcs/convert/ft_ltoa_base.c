@@ -6,12 +6,13 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 15:28:43 by fbabin            #+#    #+#             */
-/*   Updated: 2018/04/16 01:17:48 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/04/16 22:38:05 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "convert.h"
 #include "str.h"
+#include "utils.h"
 
 static int		ft_countl(unsigned int nb, int len, int neg)
 {

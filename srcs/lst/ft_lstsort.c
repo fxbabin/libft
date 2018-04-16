@@ -6,11 +6,12 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 22:02:56 by fbabin            #+#    #+#             */
-/*   Updated: 2017/12/18 14:37:12 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/04/16 22:42:54 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lst.h"
+#include "str.h"
 
 static t_list		**ft_lstalloc2(size_t size)
 {

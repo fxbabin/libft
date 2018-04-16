@@ -6,7 +6,7 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/16 01:21:57 by fbabin            #+#    #+#             */
-/*   Updated: 2018/04/16 01:38:07 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/04/16 23:34:20 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,12 @@
 
 #include <unistd.h>
 # include <fcntl.h>
-# include "libft.h"
 
 /*
 ** --------------------------------- MACROS ---------------------------------
 */
 
-# define GBUFF_SIZE 4096
+# define BUFF_SIZE 4096
 
 /*
 ** ------------------------------- STRUCTURES ---------------------------------
@@ -29,7 +28,7 @@
 
 typedef struct		s_gnl
 {
-	char			buff[GBUFF_SIZE + 1];
+	char			buff[BUFF_SIZE + 1];
 	int				fd;
 	struct s_gnl	*next;
 }					t_gnl;
@@ -51,4 +50,5 @@ int					get_next_char(const int fd, char **line,
 						char *buff, char c);
 int					get_next_line(const int fd, char **line);
 int					sget_next_line(const int fd, char **line);
+
 #endif

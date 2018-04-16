@@ -6,7 +6,7 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 17:43:01 by fbabin            #+#    #+#             */
-/*   Updated: 2018/02/16 22:18:47 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/04/16 23:37:38 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 */
 
 # include <unistd.h>
-# include <stdlib.h>
 # include <stdarg.h>
 # include <locale.h>
-# include "libft.h"
+# include "mem.h"
+# include "str.h"
 
 /*
 ** --------------------------------- DEFINES ---------------------------------
