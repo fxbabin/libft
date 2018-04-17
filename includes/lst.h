@@ -6,15 +6,15 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/16 01:24:00 by fbabin            #+#    #+#             */
-/*   Updated: 2018/04/16 22:45:55 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/04/17 15:39:50 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LST_H
 # define LST_H
 
-#include <stdlib.h>
-#include <string.h>
+# include <stdlib.h>
+# include <string.h>
 
 /*
 ** --------------------------------- STRUCTURES -------------------------------

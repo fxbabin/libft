@@ -6,7 +6,7 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 21:35:39 by fbabin            #+#    #+#             */
-/*   Updated: 2018/04/16 00:35:36 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/04/17 15:40:32 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_join(char **tab, char *sep)
 		while (tab[i][++y])
 			x++;
 	}
-	if (!(str = (char*)ft_memalloc(((i - 1) * ft_strlen(sep) + x) * sizeof(char))))
+	if (!(str = (char*)malloc(((i - 1) * ft_strlen(sep) + x) * sizeof(char))))
 		return (NULL);
 	i = -1;
 	while (tab[++i])
