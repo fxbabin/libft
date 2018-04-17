@@ -6,7 +6,7 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/24 22:41:59 by fbabin            #+#    #+#             */
-/*   Updated: 2018/04/16 23:36:02 by fbabin           ###   ########.fr       */
+/*   Updated: 2018/04/18 00:38:21 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,18 @@
 
 int				sget_next_char(const int fd, char **line, char c)
 {
-	static char		buff[BUFF_SIZE + 1];
+	static char		buff[BUF_SIZE + 1];
 	int				ret;
 	int				endl;
 	int				idx;
 
 	ret = 0;
-	if (fd < 0 || !line || !(*line = ft_strnew(BUFF_SIZE)) || BUFF_SIZE < 1)
+	if (fd < 0 || !line || !(*line = ft_strnew(BUF_SIZE)) || BUF_SIZE < 1)
 		return (-1);
 	while (1)
 	{
-		(!*buff) ? ft_bzero(buff, BUFF_SIZE + 1) : 0;
-		if (!*buff && (ret = read(fd, buff, BUFF_SIZE)) < 0)
+		(!*buff) ? ft_bzero(buff, BUF_SIZE + 1) : 0;
+		if (!*buff && (ret = read(fd, buff, BUF_SIZE)) < 0)
 			return (-1);
 		if (!ret && **line)
 			return (1);
