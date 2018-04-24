@@ -5,4 +5,4 @@ The libft project consists in recoding some functions of the C standard library.
 
 
 
-# Mark (125 / 100)
+# Mark (125%)
