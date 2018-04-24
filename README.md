@@ -4,7 +4,7 @@ The libft project consists in recoding some functions of the C standard library.
 
 # Available functions
 
-## Memory functions 
+### Memory functions 
 * ft_memset
 * ft_bzero
 * ft_memalloc
@@ -21,7 +21,7 @@ The libft project consists in recoding some functions of the C standard library.
 * ft_free2
 * ft_memdup
 
-## Input/Output functions
+### Input/Output functions
 
 * ft_putchar
 * ft_putstr
