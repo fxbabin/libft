@@ -36,4 +36,23 @@ The libft project consists in recoding some functions of the C standard library.
 * get_next_line
 * sget_next_line
 
+### Array functions
+
+* ft_join
+* ft_quicksort
+* ft_quicksort2
+* ft_strquicksort
+* ft_mergesort
+* ft_strmergesort
+* ft_char2dump
+* ft_int2dump
+
+### Binary tree functions
+
+* ft_btreecreate
+* ft_btreepush
+* ft_btreeprefix
+* ft_btreeinfix
+* ft_btreepostfix
+
 # Mark (125%)
