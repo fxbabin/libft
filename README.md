@@ -21,4 +21,19 @@ The libft project consists in recoding some functions of the C standard library.
 * ft_free2
 * ft_memdup
 
+## Input/Output functions
+
+* ft_putchar
+* ft_putstr
+* ft_putendl
+* ft_putnbr
+* ft_putchar_fd
+* ft_putstr_fd
+* ft_putendl_fd
+* ft_putnbr_fd
+* sget_next_char
+* get_next_char
+* get_next_line
+* sget_next_line
+
 # Mark (125%)
