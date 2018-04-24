@@ -4,25 +4,21 @@ The libft project consists in recoding some functions of the C standard library.
 
 # Available functions
 
-1. Memomy functions 
-            * ft_memset
-            * ft_bzero
-            
-            * ft_memalloc
-            
-            * ft_memcpy
-            
-            * ft_memccpy
-            * ft_memmove
-            * ft_memchr
-            * ft_memchrindex
-            * ft_memcmp
-            * ft_memdel
-            * ft_int2alloc
-            * ft_char2alloc
-            * ft_memalloc2
-            * ft_free2
-            * ft_memdup
-
+## Memomy functions 
+* ft_memset
+* ft_bzero
+* ft_memalloc
+* ft_memcpy
+* ft_memccpy
+* ft_memmove
+* ft_memchr
+* ft_memchrindex
+* ft_memcmp
+* ft_memdel
+* ft_int2alloc
+* ft_char2alloc
+* ft_memalloc2
+* ft_free2
+* ft_memdup
 
 # Mark (125%)
