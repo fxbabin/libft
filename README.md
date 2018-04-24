@@ -5,8 +5,8 @@ The libft project consists in recoding some functions of the C standard library.
 # Available functions
 
 1. Memomy functions 
-* ft_memset
-* ft_bzero
+            * ft_memset
+            * ft_bzero
             
             * ft_memalloc
             
