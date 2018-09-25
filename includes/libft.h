@@ -29,5 +29,6 @@
 # include "mem.h"
 # include "str.h"
 # include "utils.h"
+# include "ft_printf.h"
 
 #endif
