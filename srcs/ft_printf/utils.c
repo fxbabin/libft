@@ -6,7 +6,7 @@
 /*   By: fbabin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/19 16:15:04 by fbabin            #+#    #+#             */
-/*   Updated: 2018/06/19 16:40:29 by fbabin           ###   ########.fr       */
+/*   Updated: 2019/07/06 14:15:43 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void			ft_lltoa_static(char *str, long long nb)
 	i = ft_countt(nb);
 	while (i--)
 	{
-		str[i] = ft_abs(nb % 10) + '0';
+		str[i] = ft_absp(nb % 10) + '0';
 		nb /= 10;
 	}
 	if (neg < 0)
@@ -66,11 +66,11 @@ void			ft_llutoa_base_static(char *str,
 	unsigned long long	x;
 
 	x = (unsigned long long)nb;
-	len = ft_strlen(base);
+	len = ft_strlenp(base);
 	i = ft_countllu(x, len);
 	while (i--)
 	{
-		str[i] = base[ft_abs(x % len)];
+		str[i] = base[ft_absp(x % len)];
 		x /= len;
 	}
 }
