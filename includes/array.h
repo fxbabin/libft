@@ -20,12 +20,14 @@
 int		            ft_qs_intcmp(void *n1, void *n2);
 int		            ft_qs_strcmp(void *s1, void *s2);
 
+void	            ft_dumpint(void *nb);
+void	            ft_dumpstr(void *s);
+
 char				*ft_join(char **tab, char *sep);
 void			    ft_quicksort(void **array, int left, int right,
                         int (cmp)(void*, void*));
-void				ft_mergesort(int **array, int left, int right);
-void				ft_strmergesort(char **array, int left, int right);
-void				ft_char2dump(char **array);
-void				ft_int2dump(int **array);
+void				ft_mergesort(void **array, int left, int right,
+                        int (cmp)(void*, void*));
+void				ft_array_dump(void **array);
 
 #endif

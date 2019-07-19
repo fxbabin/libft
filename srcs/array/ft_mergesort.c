@@ -13,50 +13,71 @@
 #include "array.h"
 #include "mem.h"
 
-static void		ft_merge(int **array, int **tmp, int left, int right)
+typedef struct	s_mparams
 {
-	int		i;
-	int		j;
-	int		k;
-	int		mid;
+	int	left;
+	int	right;
+}		t_mparams;
 
-	mid = (right + left) / 2;
-	i = left;
-	j = mid + 1;
-	k = 0;
-	while (i <= mid && j <= right)
-		if (*array[i] <= *array[j])
-			*tmp[k++] = *array[i++];
-		else
-			*tmp[k++] = *array[j++];
-	while (i <= mid)
-		*tmp[k++] = *array[i++];
-	while (j <= right)
-		*tmp[k++] = *array[j++];
-	while (--k >= 0)
-		*array[left + k] = *tmp[k];
+static void             ft_merge(void **array, void **tmp, t_mparams par,
+                                int (cmp)(void*, void*))
+{
+        int             i;
+        int             j;
+        int             k;
+        int             mid;
+
+        mid = (par.right + par.left) / 2;
+        i = par.left;
+        j = mid + 1;
+        k = 0;
+        while (i <= mid && j <= par.right)
+                if (cmp(array[i], array[j]) <= 0)
+                        tmp[k++] = array[i++];
+                else
+                        tmp[k++] = array[j++];
+        while (i <= mid)
+                tmp[k++] = array[i++];
+        while (j <= par.right)
+                tmp[k++] = array[j++];
+        while (--k >= 0)
+                array[par.left + k]  = tmp[k];
 }
 
-static void		ft_sort(int **array, int **tmp, int left, int right)
+static void             ft_sort(void **array, void **tmp, t_mparams par, 
+                                int (cmp)(void*, void*))
 {
-	int		mid;
+        int             mid;
+        int             tmp_left;
+        int             tmp_right;
 
-	if (left >= right || left < 0 || right < 0)
-		return ;
-	mid = (right + left) / 2;
-	ft_sort(array, tmp, left, mid);
-	ft_sort(array, tmp, mid + 1, right);
-	ft_merge(array, tmp, left, right);
+        if (par.left >= par.right || par.left < 0 || par.right < 0)
+                return ;
+        mid = (par.right + par.left) / 2;
+        tmp_left = par.left;
+        tmp_right = par.right;
+        par.right = mid;
+        ft_sort(array, tmp, par, cmp);
+        par.left = mid + 1;
+        par.right = tmp_right;
+        ft_sort(array, tmp, par, cmp);
+        par.left = tmp_left;
+        ft_merge(array, tmp, par, cmp);
 }
 
-void			ft_mergesort(int **array, int left, int right)
+void                    ft_mergesort(void **array, int left, int right, 
+                                        int (cmp)(void*, void*))
 {
-	int		**tmp;
+        void            **tmp;
+        t_mparams       par;
 
-	if (left < 0 || right < 0 || !array || !*array)
-		return ;
-	if (!(tmp = ft_int2alloc(right + 1, 1)))
-		return ;
-	ft_sort(array, tmp, left, right);
-	free(tmp);
+        if (left < 0 || right < 0 || !array || !*array)
+                return ;
+        if (!(tmp = (void**)malloc((right + 1) * sizeof(void*))))
+                return ;
+        ft_memcpy(tmp, array, (right + 1) * sizeof(void*));
+        par.left = left;
+        par.right = right;
+        ft_sort(array, tmp, par, cmp);
+        free(tmp);
 }
