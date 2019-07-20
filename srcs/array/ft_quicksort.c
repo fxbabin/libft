@@ -6,13 +6,13 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/20 22:15:35 by fbabin            #+#    #+#             */
-/*   Updated: 2019/07/19 15:41:17 by fbabin           ###   ########.fr       */
+/*   Updated: 2019/07/20 15:43:05 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "array.h"
 
-int		ft_qs_intcmp(void* n1, void *n2)
+int				ft_qs_intcmp(void *n1, void *n2)
 {
 	int		pivot;
 
@@ -20,7 +20,7 @@ int		ft_qs_intcmp(void* n1, void *n2)
 	return (*((int*)n1) - pivot);
 }
 
-int		ft_qs_strcmp(void *s1, void *s2)
+int				ft_qs_strcmp(void *s1, void *s2)
 {
 	const unsigned char		*tmp1;
 	const unsigned char		*tmp2;
@@ -37,7 +37,7 @@ int		ft_qs_strcmp(void *s1, void *s2)
 	return (0);
 }
 
-void	ft_qs_swap(void **arr, int left, int right)
+void			ft_qs_swap(void **arr, int left, int right)
 {
 	void	*tmp;
 
@@ -46,7 +46,8 @@ void	ft_qs_swap(void **arr, int left, int right)
 	arr[right] = tmp;
 }
 
-static int		ft_partition(void **array, int left, int right, int (cmp)(void*, void*))
+static int		ft_partition(void **array, int left, int right,
+					int (cmp)(void*, void*))
 {
 	void	*pivot;
 
@@ -67,7 +68,8 @@ static int		ft_partition(void **array, int left, int right, int (cmp)(void*, voi
 	return (left);
 }
 
-void			ft_quicksort(void **array, int left, int right, int (cmp)(void*, void*))
+void			ft_quicksort(void **array, int left, int right,
+					int (cmp)(void*, void*))
 {
 	int		index;
 
