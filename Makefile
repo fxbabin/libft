@@ -6,7 +6,7 @@
 #    By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:49:24 by fbabin            #+#    #+#              #
-#    Updated: 2018/06/19 16:50:46 by fbabin           ###   ########.fr        #
+#    Updated: 2019/08/14 21:54:55 by fbabin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,9 +31,7 @@ _STR			=	ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c \
 					ft_strbspn.c ft_strbcspn.c ft_strchrindex.c \
 					ft_charinset.c ft_strjoinclr.c ft_strnjoinclr.c
 
-_ARRAY			=	ft_char2dump.c ft_int2dump.c ft_join.c \
-					ft_quicksort.c ft_quicksort2.c \
-					ft_strquicksort.c ft_mergesort.c ft_strmergesort.c \
+_ARRAY			=	ft_join.c ft_quicksort.c ft_mergesort.c ft_array_dump.c \
 
 _LST			=	ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c \
 					ft_lstiter.c ft_lstmap.c ft_lstcreate.c ft_lstpushback.c \
@@ -58,8 +56,9 @@ _IO				=	ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c \
 					ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
 					ft_putnbr_fd.c get_next_line.c sget_next_line.c \
 
-_FT_PRINTF		=	ft_printf.c ft_sprintf.c padding.c xtract.c handler_wc.c \
+_FT_PRINTF		=	ft_printf.c padding.c xtract.c handler_wc.c \
 					handler_ws.c handler_num.c handler_fnk.c utils.c \
+					utils2.c utils3.c \
 
 MEM_DIR			=	srcs/mem
 STR_DIR			=	srcs/str
