@@ -6,74 +6,88 @@
 /*   By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 00:19:46 by fbabin            #+#    #+#             */
-/*   Updated: 2018/04/17 16:41:41 by fbabin           ###   ########.fr       */
+/*   Updated: 2019/10/20 21:53:13 by fbabin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "utils.h"
 #include "ft_printf.h"
-#include "mem.h"
 #include "str.h"
 
-static void		add_option(char **opt, char flag, const char *opts)
+int		ft_opt_add(t_optlist **opt, char flag, char *param)
 {
-	char	*t;
-	int		b;
+	t_optlist	*tmp;
 
-	b = 0;
-	if (!(t = (char*)ft_memalloc(2 * sizeof(char))))
-		return ;
-	ft_memcpy(t, &flag, 1);
-	if (ft_charinset(flag, *opt))
-		b++;
-	if (b == 0)
-		ft_strcat(*opt, t);
-	ft_strdel(&t);
+	tmp = *opt;
+	while (tmp)
+	{
+		if (tmp->flag == flag)
+		{
+			tmp->param = param;
+			return (0);
+		}
+		tmp = tmp->next;
+	}
+	ft_optlist_pushback(opt, flag, NULL);
+	return (0);
 }
 
-static int		parse_options(char **opt, char **argv, int *i,
-		const char *opts)
+static void		add_option(t_optlist **opt, char **argv, int i, int y)
+{
+	if (argv[i][y + 1] == '\0')
+	{
+		if (!argv[i + 1])
+		{
+			ft_opt_add(opt, argv[i][y], NULL);
+			return ;
+		}
+		ft_opt_add(opt, argv[i][y], argv[i + 1]);
+	}
+	else
+		ft_opt_add(opt, argv[i][y], NULL);
+}
+
+static int		parse_options(t_optlist **opts, char **argv, int i,
+					char *avail_opts)
 {
 	int		y;
 
 	y = 0;
-	while (argv[*i][++y])
+	while (argv[i][++y])
 	{
-		if (ft_charinset(argv[*i][y], opts))
-			add_option(opt, argv[*i][y], opts);
+		if (ft_charinset(argv[i][y], avail_opts))
+			add_option(opts, argv, i, y);
 		else
 		{
-			ft_dprintf(2, "%s: illegal option -- %c\n", argv[0], argv[*i][y]);
-			return (0);
+			ft_dprintf(2, "%s: illegal option -- %c\n", argv[0], argv[i][y]);
+			return (-1);
 		}
 	}
-	return (1);
+	return (0);
 }
 
-char			*ft_getopt(int argc, char **argv, const char *opts)
+int				ft_getopt(t_optlist **opts, int argc,
+					char **argv, char *avail_opts)
 {
-	char	**tabopt;
-	char	*opt;
-	int		i;
+	int			i;
+	int			count;
 
 	i = 0;
-	if (!(tabopt = (char**)ft_split((char*)opts, ";")))
-		return (NULL);
-	if (!(opt = (char*)ft_memalloc((ft_strlen(opts) + 1) * sizeof(char))))
-		return (NULL);
 	while (++i < argc)
 	{
-		if (!ft_strcmp(argv[i], "--"))
+		if (count == 2 || !ft_strcmp(argv[i], "--"))
 			break ;
 		if (argv[i][0] != '-')
-			break ;
-		if (!parse_options(&opt, argv, &i, tabopt[0]))
 		{
-			ft_free2((void**)tabopt);
-			ft_strdel(&opt);
-			return (NULL);
+			count++;
+			continue ;
+		}
+		count = 0;
+		if (parse_options(opts, argv, i, avail_opts) == -1)
+		{
+			ft_optlist_del(opts);
+			return (-1);
 		}
 	}
-	ft_free2((void**)tabopt);
-	return (opt);
+	return (i - 1);
 }
