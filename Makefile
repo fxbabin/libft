@@ -6,7 +6,7 @@
 #    By: fbabin <fbabin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:49:24 by fbabin            #+#    #+#              #
-#    Updated: 2019/09/16 14:25:28 by fbabin           ###   ########.fr        #
+#    Updated: 2019/10/20 21:52:05 by fbabin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ _CONVERT		=	ft_atoi.c ft_itoa.c ft_itoa_base.c \
 
 _UTILS			=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 					ft_isprint.c ft_toupper.c ft_tolower.c \
-					ft_isspace.c ft_getopt.c ft_free2.c \
+					ft_isspace.c ft_getopt.c ft_optlist.c ft_free2.c \
 					ft_iswp.c  ft_tabsize.c ft_abs.c ft_swap.c
 
 _IO				=	ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c \
